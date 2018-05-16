@@ -20,23 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
 			console.log('successfully made request');
 			console.log(data['cats'].length);
 
-			// data['cats'].forEach(function(cat){
-			// 	var img = create.getElementById('img')
-
-			// 	var catName = cat.name;
-			// 	var catPhoto = cat.photo;
-
-			// 	img.src = catPhoto
-
-
-
-			// })
-
 			for(i=0; i<data['cats'].length;i++){
 				var img = document.createElement('img');
 				var cat = (data['cats'][i]);
 				img.src = cat.photo;
-				boxes[i].append(img);			
+				boxes[i].innerHTML = '';
+				
+				boxes[i].append(img);		
 			}
 		})
 
